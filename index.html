@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<section class="auth" id="auth">
+    <div class="section__inner">
+
+        <h1 class="section__title">
+            Wallet
+        </h1>
+        <p class="section__text">Поможем огранизовать ваши финансы</p>
+
+        <div class="form-control center">
+            <label for="authInput">Код-доступ</label>
+            <input id='authInput' class="field" type="password" placeholder="****">
+        </div>
+
+    </div>
+</section>
+
+<section class="section wallet hide" id="wallet">
+    <div class="container">
+        <header class="wallet-header">
+            <h1 class="wallet-header__title">
+                Wallet Dashboard
+            </h1>
+        </header>
+
+        <div class="grid">
+
+            <div class="item" id="summary">
+                <h3 class="item__title">
+                    Сводка
+                </h3>
+
+                <p class="item__text">Баланс: <br><span id="balance_span">0</span> рублей.</p>
+                <p class="item__text">Доходы: <br><span id="income_span">0</span> рублей.</p>
+                <p class="item__text">Расходы: <br><span id="expenses_span">0</span> рублей.</p>
+            </div>
+
+            <div class="item" id="category">
+                <h3 class="item__title">
+                    Категории
+                </h3>
+                <div class="form-control">
+                    <label for="categoryInput">Наименование категории</label>
+                    <input type="text" class="field" id="categoryInput" placeholder="Наименование категории">
+                </div>
+                <button class="button button--expenses">Добавить</button>
+            </div>
+
+            <div class="item " id="income">
+                <h3 class="item__title">
+                    Доходы
+                </h3>
+                <div class="form-control">
+                    <label for="incomeInput">Сумма:</label>
+                    <input type="text" class="field" id="incomeInput" placeholder="0">
+                </div>
+
+                <select class="category-selector m-10"></select>
+
+                <button class="button button--income">Добавить</button>
+            </div>
+
+            <div class="item col-2" id="expenses">
+                <h3 class="item__title">
+                    Расходы
+                </h3>
+                <div class="form-control">
+                    <label for="expensesInput">Сумма:</label>
+                    <input type="text" class="field" id="expensesInput" placeholder="0">
+                </div>
+
+                <select class="category-selector m-10"></select>
+
+                <button class="button button--expenses">Добавить</button>
+            </div>
+
+            <div class="item" id="settings">
+                <h3 class="item__title">
+                    Настройки
+                </h3>
+                <div class="form-control">
+                    <label for="passwordInout">Новый пароль</label>
+                    <input type="password" class="field" id="passwordInout" placeholder="Что-то очень секретно...">
+                </div>
+
+                <button class="button settings__button" id="resetBtn">Сбросить</button>
+                <button class="button settings__button" id="changeBtn">Изменить</button>
+                <button class="button settings__button" id="logoutButton">Выйти</button>
+            </div>
+
+            <div class="item col-2" id="stats">
+                <h3 class="item__title">
+                    Статистика
+                </h3>
+                <div class="wrapper">
+                    <div class="filter" id="filter">
+                        <p>Фильтр по: </p>
+                        <select id="filterSelector">
+                            <option value="all">всем</option>
+                            <option value="day">дням</option>
+                            <option value="week">неделям</option>
+                            <option value="month">месяцам</option>
+                        </select>
+
+                        <select id="categoryFilter" class="category-selector"></select>
+                    </div>
+                    <ul class="list" id="list">
+                        <li class="list-item"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="item">
+                <h3 class="item__title">
+                    Совет
+                </h3>
+
+                <p class="item__text">Рекомендации по категории: <span id="recommendation"></span>, вам стоит меньше
+                    тратить
+                    по ней</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="notifications">
+
+    </div>
+</section>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

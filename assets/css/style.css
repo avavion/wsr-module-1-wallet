@@ -1,0 +1,252 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Основные цвета и настройки */
+:root {
+    --accent: #b48aff;
+}
+
+body {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color: #0e0a14;
+}
+
+.section__inner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__title {
+    font-size: 64px;
+}
+
+.section__text {
+    font-size: 18px;
+}
+
+.auth p {
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.field {
+    padding: 10px 15px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control.center {
+    align-items: center;
+
+}
+
+.form-control label {
+    /*color: var(--accent);*/
+    margin-bottom: 10px;
+}
+
+.auth .form-control input {
+    text-align: center;
+}
+
+.grid {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.item__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.grid .item {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #2a282f;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.wallet {
+    padding: 60px 0;
+}
+
+.wallet-header {
+    margin-bottom: 24px;
+}
+
+.wallet-header__title {
+    font-size: 48px;
+}
+
+.button {
+
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--accent);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+
+    transition: all 0.3s ease-in-out;
+}
+
+/* Стили для выпающего списка */
+select {
+    padding: 10px 15px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter #filterSelector {
+    margin: 0 10px;
+}
+
+#settings button {
+    width: 100%;
+}
+
+#settings .form-control {
+    margin-bottom: 10px;
+}
+
+#settings button:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+.m-10 {
+    margin: 10px 0;
+}
+
+#income, #category, #expenses {
+    display: flex;
+    flex-direction: column;
+}
+
+.button--expenses {
+    margin-top: 10px;
+}
+
+#summary .item__text:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#summary .item__text {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.list-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.list-item.income {
+    background-color: #5ac05a;
+}
+
+.list-item.expenses {
+    background-color: #b24e4e;
+}
+
+#income_span {
+    color: #5ac05a;
+}
+
+#expenses_span {
+    color: #b24e4e;
+}
+
+#balance_span {
+    color: var(--accent);
+}
+
+.notifications {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.notification {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: var(--accent);
+    border-radius: 8px;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #2f234d;
+}
+
+@media (max-width: 520px) {
+    .filter, .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter select {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .filter p {
+        margin-bottom: 10px;
+    }
+
+    .filter {
+        margin-bottom: 20px;
+    }
+
+    .list-item {
+        font-size: 14px;
+    }
+}
